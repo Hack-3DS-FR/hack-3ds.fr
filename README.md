@@ -4,4 +4,4 @@ Bienvenue sur le site officiel de 'Hack 3DS FR'. Ce site a pour but de présente
 
 Le site est en cours de développement, et de nombreuses fonctionnalités ainsi que des améliorations de style sont encore à venir. Je suis ouvert à toutes suggestions, que ce soit pour l'ajout de nouvelles fonctionnalités ou pour toute autre idée d'amélioration.
 
-Le site est hébergé via Netlify.
+Le site est hébergé via Github-Pages.
