@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
 :root{
     --theme-color : black;
-    --color-1: #2fbff4;
+    --color-1: #4682B4;
     --text-color: white;
     --other-color: #006aff;
     --base-variant: white; 
@@ -9,7 +9,7 @@
     --grid-box-shadow-color : white;
     --footer: black;
     --text-footer: white;
-    --social: #2fbff4;
+    --social: #4682B4;
     --social-box: black;
 }
 .gif{
@@ -44,17 +44,14 @@ main {
     background-color: var(--theme-color);
     color: var(--text-color);
 }
-/* Menu de navigation */
-nav{
-    height: 60px;
+/* Style de base pour la barre de navigation */
+nav {
     background-color: var(--color-1);
+    padding: 10px;
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
     align-items: center;
-    width: 100%;
-    z-index: 1000;
-    padding-inline: 7%;
-    position: fixed;
+    position: relative;
 }
 .navSpace {
     height: 30px;
@@ -68,14 +65,31 @@ nav{
     flex-direction: row;
     align-items: center;
 }
-nav a{
-    height: 100%;
-    padding: 0 20px;
-    display: flex;
-    align-items: center;
-    text-decoration: none;
+/* Style des éléments de la barre de navigation */
+nav a {
     color: var(--text-color);
-    margin: 0;
+    text-decoration: none;
+    padding: 8px 20px;
+    display: inline-block;
+    position: relative;
+    margin: 0 10px; /* Espace entre les éléments de la barre de navigation */
+}
+nav a.home {
+    margin-left: 40px; /* Espace supplémentaire à gauche de l'élément "Accueil" */
+}
+nav a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 3px;
+    background-color: white;
+    bottom: -3px;
+    left: 0;
+    transition: width 0.3s ease, transform 0.3s ease;
+}
+nav a:hover::after {
+    width: 100%;
+    transform: translateY(8px);
 }
 nav svg{
     fill: var(--text-color)
@@ -83,9 +97,17 @@ nav svg{
 nav li{
     text-decoration: none;
 }
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    width: auto;
+}
 nav ul li {
-    text-decoration: none;
-    display: block;
+    position: relative;
+    padding: 0;
 }
 /* Barre latérale pour le responsive */
 #sidebar-active{
@@ -95,7 +117,7 @@ nav ul li {
     padding: 0 20px;
     display: none;
 }
-/* Style pour les menu déroulant dans la barre de navigation */
+/* Style des menus déroulants dans la barre de navigation */
 .dropdown {
     position: relative;
     display: inline-block;
@@ -106,20 +128,26 @@ nav ul li {
     background-color: var(--color-1);
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
+    z-index: 999;
     opacity: 0;
     transform: scaleY(0);
     transform-origin: top;
     transition: opacity 0.3s ease, transform 0.3s ease;
+    margin-top: 10px;
+    padding: 0;
 }
 .dropdown-content a {
-    color: var(--text-color);
-    padding: 12px 16px;
+    color: white;
+    padding: 8px 12px;
     text-decoration: none;
     display: block;
 }
+.dropdown-content a::after {
+    display: none;
+}
 .dropdown-content a:hover {
-    background-color: var(--text-color);
+    background-color: #2f618a;
+    color: white;
 }
 /* Style pour afficher le menu déroulant lors du clic */
 .dropdown.open .dropdown-content {
