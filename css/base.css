@@ -15,7 +15,8 @@
 .gif{
     width: 60px;
     color: var(--text-color);
-    margin-right: 15px;
+    align-items: center;
+    text-align: center;
 }
 *{
     margin: 0;
@@ -43,39 +44,41 @@ main {
     padding: 20px;
     background-color: var(--theme-color);
     color: var(--text-color);
+    margin-left: 200px;
 }
 /* Style de base pour la barre de navigation */
 nav {
     background-color: var(--color-1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 200px; /* Ajuste la largeur selon tes besoins */
+    height: 100%;
     padding: 10px;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: relative;
+    flex-direction: column;
+    justify-content: flex-start;
+    z-index: 1000;
 }
 .navSpace {
     height: 30px;
     margin-bottom: 10px;
     z-index: 230;
 }
-.links-container{
-    height: 100%;
-    width: 100%;
+.links-container {
     display: flex;
-    flex-direction: row;
-    align-items: center;
+    flex-direction: column;
+    width: 100%;
 }
 /* Style des éléments de la barre de navigation */
 nav a {
     color: var(--text-color);
     text-decoration: none;
-    padding: 8px 20px;
-    display: inline-block;
-    position: relative;
-    margin: 0 10px;
-}
-nav a.home {
-    margin-left: 40px;
+    padding: 15px 20px;
+    display: block;
+    width: 100%;
+    text-align: left;
+    margin: 10px 0;
 }
 nav a::after {
     content: '';
@@ -166,7 +169,6 @@ nav ul li {
     align-items: center;
     justify-content: flex-start;
     width: 100%;
-
 }
 .grid-content {
     display: flex;
@@ -345,6 +347,7 @@ footer {
     padding: 20px 0;
     background-color: var(--footer);
     text-align: center;
+    margin-left: 200px;
 }
 footer hr {
     border: 0;
