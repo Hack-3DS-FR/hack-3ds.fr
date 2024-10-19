@@ -25,9 +25,14 @@
 }
 
 body {
-    background-color: var(--theme-color);
+    background: var(--theme-color);
     color: var(--text-color);
     font-family: "Outfit", sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
 }
 /* Style de base pour la barre de navigation */
 .side-nav{
@@ -373,7 +378,6 @@ details ul li{
 /* Pied de page */
 footer {
     padding: 20px 0;
-    background-color: var(--footer);
     text-align: center;
     margin-left: 200px;
 }
