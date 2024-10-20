@@ -35,11 +35,13 @@ body {
     width: 100%;
 }
 /* Style de base pour la barre de navigation */
-.side-nav{
+.side-nav {
     position: fixed;
     height: 100vh;
     left: 0;
     top: 0;
+    margin: 0;
+    padding: 0;
 }
 .wrapper{
     background: #333;
@@ -55,18 +57,22 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100px;
-    margin-top: 20px;
     text-align: center;
+    border-bottom: 1px solid #F2F2F21e;
 }
 .title img {
     height: 60px;
+    margin-top: 20px;
     margin-bottom: 10px;
+}
+.title span{
+    margin-bottom: 20px;
 }
 .nav-bloc{
     padding: 20px 0;
     display: flex;
     justify-content: center;
+    align-items: center;
     cursor: pointer;
     border-bottom: 1px solid #F2F2F21e;
     transition: justify-content 0.3s ease;
@@ -77,6 +83,8 @@ body {
 }
 .nav-bloc svg{
     width: 25px;
+    height: 25px;
+    margin-right: 10px;
     fill: #F2F2F2;
     transition: fill 0.2s ease-in-out;
 }
@@ -90,6 +98,8 @@ body {
     display: none;
     margin-left: 10px;
     color: #F2F2F2;
+    font-size: 16px;
+    line-height: 1;
 }
 .wrapper.expanded .nav-bloc span {
     display: inline-block;
