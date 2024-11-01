@@ -23,7 +23,6 @@
     padding: 0;
     box-sizing: border-box;
 }
-
 body {
     background: var(--theme-color);
     color: var(--text-color);
@@ -33,6 +32,7 @@ body {
     align-items: center;
     justify-content: flex-start;
     width: 100%;
+    padding-bottom: 50px
 }
 /* Style de base pour la barre de navigation */
 .side-nav {
@@ -42,6 +42,7 @@ body {
     top: 0;
     margin: 0;
     padding: 0;
+    z-index: 10;
 }
 .wrapper{
     background: #333;
@@ -67,6 +68,10 @@ body {
 }
 .title span{
     margin-bottom: 20px;
+    display: none;
+}
+.title a{
+    text-decoration: none;
 }
 .nav-bloc{
     padding: 20px 0;
@@ -178,7 +183,7 @@ body {
     opacity: 1;
 }
 .wrapper.expanded .title span {
-    display: inline-block;
+    display: block;
     color: #FFF;
     margin-top: 10px;
     font-size: 1.2rem;
@@ -187,6 +192,7 @@ body {
 /* Rotation de l'icône SVG lorsque le menu est déroulé */
 .wrapper.expanded .toggle-button svg {
     transform: rotate(180deg);
+    width: 80px;
 }
 /* Barre latérale pour le responsive */
 #sidebar-active{
@@ -282,6 +288,7 @@ body {
 /* Style pour les tutos*/
 .container-tuto{
     font-size: 120%;
+    margin-left: 120px;
 }
 .section-tuto{
     margin-top: 50px;
@@ -387,17 +394,16 @@ details ul li{
 }
 /* Pied de page */
 footer {
-    padding: 20px 0;
-    text-align: center;
-    margin-left: 200px;
-}
-footer hr {
-    border: 0;
-    border-top: 2px solid var(--text-footer);
-    margin: 10px 0; 
-    width: 100%;
-}
-footer p {
+    background-color: var(--footer);
     color: var(--text-footer);
-    padding-left: 20px;
+    position: relative; /* Change le positionnement à relatif */
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+    z-index: 1;
+}
+footer a {
+    color: var(--other-color);
+    text-decoration: none;
 }
