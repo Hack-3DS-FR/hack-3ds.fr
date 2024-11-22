@@ -1,22 +1,30 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
 :root{
     /* Whitemode */
-    --theme-background-menu-whitemode : #f6f6f6;
-    --theme-hover-menu-whitemode : #f6f6f6;
-    --theme-hover-sub-menu-whitemode : #dfdede;
-    --theme-text-sub-menu-whitemode : ;
-    --theme-text-whitemode : black;
-    --theme-text-banner-whitemode : white;
-    --theme-background-card-whitemode : #e1e2f7;
-    --theme-background-hover-card-whitemode : rgb(204, 204, 204);
-    /* Darkmode */
-    --theme-background-menu-darkmode : #1b1b1f;
-    --theme-hover-menu-darkmode : black;
-    --theme-hover-sub-menu-darkmode : #9e9c9c;
-    --theme-text-sub-menu-darkmode : ;
-    --theme-text-darkmode : white;
-    --theme-text-banner-darkmode : white;
-    --theme-background-card-darkmode : #e1e2f7;
+    --theme-background-menu : #f6f6f6;
+    --theme-hover-menu- : #f6f6f6;
+    --theme-hover-sub-menu : #dfdede;
+    --theme-text-sub-menu : ;
+    --theme-text : black;
+    --theme-text-banner : white;
+    --theme-background-card : #e1e2f7;
+    --theme-background-hover-card : rgb(204, 204, 204);
+    --theme-background-page : white;
+    --theme-switch-color : black;
+    --theme-switch-background-color : white;
+}
+.darkmode{
+    --theme-background-menu : #1b1b1f;
+    --theme-hover-menu : black;
+    --theme-hover-sub-menu : #9e9c9c;
+    --theme-text-sub-menu : ;
+    --theme-text : white;
+    --theme-text-banner : white;
+    --theme-background-card : #727272;
+    --theme-background-hover-card : rgb(204, 204, 204);
+    --theme-background-page : black;
+    --theme-switch-color : white;
+    --theme-switch-background-color : black;
 }
 * {
     margin: 0;
@@ -24,13 +32,40 @@
 }
 body{
     font-family: "Outfit", sans-serif;
+    background-color: var(--theme-background-page);
+}
+/* Changement de thème (Clair / Sombre) */
+#theme-switch{
+    height: 50px;
+    width: 50px;
+    padding: 0;
+    border-radius: 50%;
+    background-color: var(--theme-switch-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 5px;
+    right: 20px;
+}
+#theme-switch svg{
+    fill: var(--theme-switch-background-color);
+}
+#theme-switch svg:last-child{
+    display: none;
+}
+.darkmode #theme-switch svg:first-child{
+    display: none;
+}
+.darkmode #theme-switch svg:last-child{
+    display: block;
 }
 /* Menu de navigation */
 .menu{
     position: sticky;
     top: 0;
     left: 0;
-    background: var(--theme-background-menu-whitemode);
+    background: var(--theme-background-menu);
     z-index: 1;
 }
 .menu > ul{
@@ -39,7 +74,7 @@ body{
 }
 .menu li a{
     text-decoration: none;
-    color: var(--theme-text-whitemode);
+    color: var(--theme-text);
     padding: 20px 20px;
     display: block;
 }
@@ -55,7 +90,7 @@ body{
 }
 .sous-menu li a:hover{
     transition: 200ms ease;
-    background-color: var(--theme-hover-sub-menu-whitemode);
+    background-color: var(--theme-hover-sub-menu);
     border-radius: 15px;
 }
 .has-sous-menu{
@@ -63,7 +98,7 @@ body{
 }
 .has-sous-menu:hover .sous-menu{
     display: block;
-    background-color: var(--theme-hover-menu-whitemode);
+    background-color: var(--theme-hover-menu);
 }
 /* Bouton accueil à gauche */
 .accueil{
@@ -93,11 +128,11 @@ body{
 .banner-content p{
     font-size: 2rem;
     font-weight: 300;
-    color: var(--theme-text-banner-whitemode);
+    color: var(--theme-text-banner);
 }
 .banner-content h1{
     font-size: 5rem;
-    color: var(--theme-text-banner-whitemode);
+    color: var(--theme-text-banner);
 }
 /* Mise en forme Bienvenue */
 .welcome{
@@ -109,9 +144,11 @@ body{
 }
 .welcome h1{
     margin-top: 50px;
+    color: var(--theme-text);
 }
 .welcome p{
     margin: 15px 0;
+    color: var(--theme-text);
 }
 /* Carte des projets */
 .container-card{
@@ -120,15 +157,15 @@ body{
     flex-wrap: wrap;
 }
 .card{
-    background: var(--theme-background-card-whitemode);
-    color: var(--theme-text-whitemode);
+    background: var(--theme-background-card);
+    color: var(--theme-text-sub-menu);
     width: 270px;
     margin: 10px;
     border-radius: 15px;
 }
 .card:hover{
-    background: var(--theme-background-hover-card-whitemode);
-    color: var(--theme-text-whitemode);
+    background: var(--theme-background-hover-card);
+    color: var(--theme-text);
     cursor: pointer;
     transform: scale(1.03);
     transition: all 0.5s ease;
