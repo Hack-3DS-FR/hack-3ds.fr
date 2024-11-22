@@ -1,5 +1,5 @@
 let darkmode = localStorage.getItem('darkmode')
-const themeSwitch = document.getElementByID('theme-switch')
+const themeSwitch = document.getElementById('theme-switch')
 
 const enableDarkmode = () => {
     document.body.classList.add('darkmode')
