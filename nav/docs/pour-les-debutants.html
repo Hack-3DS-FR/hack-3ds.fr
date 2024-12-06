@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="icon" href="/assets/images/icons/hack_3ds_fr_logo.png"/>
+    <title>Jailbreak 3DS | Hack 3DS FR</title>
+    <script type="text/javascript" src="/js/darkmode.js" defer></script>
+</head>
+<body>
+    <div class="menu">
+        <ul>
+            <li><a href="/index.html" class="accueil">Hack 3DS FR</a></li>
+            <li class="has-sous-menu">
+                <a href="">Documentation</a>
+                <ul class="sous-menu">
+                    <li><a href="#">Pour les débutants</a></li>
+                    <li><a href="/nav/docs/hacker-sa-3ds.html">Hacker sa 3DS</a></li>
+                    <li><a href="">Vérifier le hack</a></li>
+                </ul>
+            </li>
+            <li><a href="/nav/docs/depannage.html">Dépannage</a></li>
+            <li><a href="">Logiciel 3DS/PC</a></li>
+            <li><a href="/nav/apropos.html">À Propos</a></li>
+        </ul>
+        <button id="theme-switch">
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"><path d="M480-120q-150 0-255-105T120-480q0-150 105-255t255-105q14 0 27.5 1t26.5 3q-41 29-65.5 75.5T444-660q0 90 63 153t153 63q55 0 101-24.5t75-65.5q2 13 3 26.5t1 27.5q0 150-105 255T480-120Z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"><path d="M480-280q-83 0-141.5-58.5T280-480q0-83 58.5-141.5T480-680q83 0 141.5 58.5T680-480q0 83-58.5 141.5T480-280ZM200-440H40v-80h160v80Zm720 0H760v-80h160v80ZM440-760v-160h80v160h-80Zm0 720v-160h80v160h-80ZM256-650l-101-97 57-59 96 100-52 56Zm492 496-97-101 53-55 101 97-57 59Zm-98-550 97-101 59 57-100 96-56-52ZM154-212l101-97 55 53-97 101-59-57Z"/></svg>
+        </button>
+    </div>
+    <main>
+        <nav class="table-des-matieres">
+            <ul>
+                <li><a href="#introduction">Information clées</a></li>
+                <li><a href="#compatibilite">Compatibilité</a></li>
+                <li><a href="#terminologie">Terminologie Importante</a></li>
+            </ul>
+        </nav>
+        <section class="container-tuto" id="introduction">
+            <div class="section-tuto">
+                <h1>Pour les débutants</h1>
+                <div class="information">
+                    <p>Pour rappel nous utilisons des informations du site officiel <a href="https://3ds.hacks.guide">3DS Hacks Guide</a> car à l'heure où nous écrivons la documentation il n'y a pas de traduction française</p>
+                </div>
+                <h2>Information clées</h2>
+                <p>Cette page vous présente les notions fondamentales d'informatique et les informations spécifiques à la 3DS indispensables pour suivre ce guide.</p>
+                <p>Toutes les sections sont repliées par défaut : cliquez ou appuyez sur le titre d'une section pour la développer et découvrir son contenu.</p>
+                <h2>Compatibilité</h2>
+                <details id="compatibilite">
+                    <summary>Quelles consoles sont compatibles avec ce guide ?</summary>
+                    <p><img src="/assets/images/screenshots/compatible.png" alt=""></p>
+                    <p>Ce guide est compatible avec toutes les consoles de la famille Nintendo 3DS, y compris les modèles 3DS, 3DS XL/LL, 2DS, New 3DS, New 3DS XL/LL et New 2DS XL/LL, quelle que soit leur région ou version du firmware.</p>
+                </details>
+                <details>
+                    <summary>Quel type d'ordinateur ou de matériel est nécessaire pour suivre ce guide ?</summary>
+                    <p><img src="/assets/images/screenshots/os.jpg" alt=""></p>
+                    <p>Dans la plupart des cas, ce guide peut être suivi avec n’importe quel appareil capable de télécharger des fichiers depuis Internet et de les copier sur une carte SD. Si votre ordinateur, téléphone ou autre appareil ne dispose pas d’un lecteur de carte SD, il vous faudra peut-être utiliser un adaptateur USB vers carte SD pour accéder à votre carte.</p>
+                </details>
+                <details>
+                    <summary>Quel type de carte SD est requis pour ma console ?</summary>
+                    <p><img src="/assets/images/screenshots/cartesd.jpg" alt=""></p>
+                    <p>L'emplacement de la fente pour carte SD et le type de carte accepté varient selon le modèle de votre 3DS. Vous trouverez plus de détails à ce sujet sur la page d'assistance officielle de Nintendo.</p>
+                    <p>La 3DS est compatible avec les cartes SD de toutes capacités, y compris celles dépassant 32 Go, à condition qu'elles soient formatées en FAT32 (et non en exFAT ou NTFS). Pour formater votre carte SD en FAT32, vous pouvez utiliser l'un des outils suivants en fonction de votre système d'exploitation :</p>
+                    <ul>
+                        <li><a href="">Windows</a></li>
+                        <li><a href="">macOS</a></li>
+                        <li><a href="">Linux</a></li>
+                    </ul>
+                    <p>Cependant, les cartes SD de plus de 128 Go ne sont pas recommandées, car elles peuvent provoquer des problèmes avec les thèmes personnalisés et les graphiques GBA/DS.</p>
+                </details>
+                <div class="disclaimer-box">
+                    <details>
+                        <summary>Risques potentiels (Disclaimer)</summary>
+                        <p>En modifiant votre console, vous acceptez un risque, bien que faible, qu'elle puisse être brickée (rendue inutilisable). Un mauvais placement de fichiers ne provoquera pas de brick, mais ignorer délibérément certaines instructions pourrait entraîner des problèmes.</p>
+                        <p>En résumé : le modding de votre console est généralement sûr, mais vous êtes responsable en cas de problème.</p>
+                    </details>
+                </div>
+                <h2>Terminologie Importante</h2>
+                <div class="disclaimer" id="terminologie">
+                    <p>Suivre ce guide ne devrait pas entraîner de perte de données. Cependant, il existe un faible risque de corruption de la carte SD.</p>
+                    <p>Pour éviter tout problème, il est fortement recommandé de sauvegarder le contenu de votre carte SD, en particulier le dossier Nintendo 3DS, si vous avez des données importantes.</p>
+                </div>
+                <details>
+                    <summary>Qu'entend-on par "racine de la carte SD" ou "/luma/" ?</summary>
+                    <p>Lors de la copie de fichiers sur votre carte SD, il est essentiel de les placer au bon emplacement. Sinon, votre console ne pourra pas les détecter, ce qui empêchera l'exploit ou le logiciel de fonctionner correctement.</p>
+                    <p>Un terme fréquemment utilisé dans ce guide est "racine de la carte SD". Cela fait référence à l'emplacement de base de votre carte SD, où aucun dossier n'est ouvert. Lorsque vous accédez à votre carte SD sur votre ordinateur, le répertoire principal qui s’affiche est appelé la "racine".</p>
+                    <p>Les noms de dossiers sont souvent indiqués sous la forme suivante : <code>/dossier/</code>. Les barres obliques servent uniquement à décrire le chemin d'accès et ne font pas partie du nom du dossier. Par exemple, /dossier1/dossier2/ désigne le dossier dossier2, situé à l’intérieur de dossier1.</p>
+                    <p>Les crochets angulaires (< et >) sont parfois utilisés pour indiquer des identifiants spécifiques à votre système. Par exemple, si le guide mentionne <ID0>, cela fait référence à l'identifiant unique de votre système, situé dans le dossier Nintendo 3DS, et non à un dossier littéralement nommé "ID0".</p>
+                </details>
+                <details>
+                    <summary>Comment décompresser ou ouvrir un fichier ZIP ?</summary>
+                    <p>Certains fichiers que vous devrez télécharger sont au format .zip, un type de fichier compressé permettant de regrouper plusieurs fichiers en un seul.</p>
+                    <p>Lorsque le guide indique de "copier (fichier) depuis (fichier).zip", cela signifie que vous devez ouvrir ou "extraire" le fichier ZIP. Une fois extrait, vous trouverez à l'intérieur le fichier nécessaire, que vous pourrez ensuite copier à l'emplacement spécifié sur votre carte SD.</p>
+                    <p>Sur la plupart des systèmes d'exploitation, un simple double-clic sur le fichier ZIP suffit pour l'extraire. Si ce n'est pas le cas, vous pouvez utiliser un outil d'extraction tiers fiable, comme 7-zip.</p>
+                </details>
+                <details>
+                    <summary>Quelles sont les extensions de fichiers?</summary>
+                    <p>Si votre ordinateur utilise Windows, les extensions de fichiers sont souvent masquées par défaut, ce qui peut rendre difficile l'identification des fichiers. Pour activer l'affichage des extensions de fichiers, suivez ces étapes :</p>
+                </details>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

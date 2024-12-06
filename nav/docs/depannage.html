@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/styles.css">
-    <link rel="icon" href="/assets/images/icons/hack_3ds_fr_logo.png"/>
+    <link rel="icon" href="/assets/images/icons/hack_3ds_fr_logo.png" />
     <title>Jailbreak 3DS | Hack 3DS FR</title>
+    <script type="text/javascript" src="/js/darkmode.js" defer></script>
 </head>
+
 <body>
     <div class="menu">
         <ul>
@@ -19,392 +22,421 @@
                     <li><a href="">Vérifier le hack</a></li>
                 </ul>
             </li>
-            <li><a href="">Dépannage</a></li>
-            <li class="has-sous-menu-logiciel"><a href="">Logiciel 3DS/PC</a></li>
-            <li><a href="">À Propos</a></li>
+            <li><a href="/nav/docs/depannage.html">Dépannage</a></li>
+            <li><a href="">Logiciel 3DS/PC</a></li>
+            <li><a href="/nav/apropos.html">À Propos</a></li>
         </ul>
+        <button id="theme-switch">
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px">
+                <path
+                    d="M480-120q-150 0-255-105T120-480q0-150 105-255t255-105q14 0 27.5 1t26.5 3q-41 29-65.5 75.5T444-660q0 90 63 153t153 63q55 0 101-24.5t75-65.5q2 13 3 26.5t1 27.5q0 150-105 255T480-120Z" />
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px">
+                <path
+                    d="M480-280q-83 0-141.5-58.5T280-480q0-83 58.5-141.5T480-680q83 0 141.5 58.5T680-480q0 83-58.5 141.5T480-280ZM200-440H40v-80h160v80Zm720 0H760v-80h160v80ZM440-760v-160h80v160h-80Zm0 720v-160h80v160h-80ZM256-650l-101-97 57-59 96 100-52 56Zm492 496-97-101 53-55 101 97-57 59Zm-98-550 97-101 59 57-100 96-56-52ZM154-212l101-97 55 53-97 101-59-57Z" />
+            </svg>
+        </button>
     </div>
     <main>
-        <section class="welcome">
+        <nav class="table-des-matieres">
+            <ul>
+                <li><a href="#introduction">Dépannage</a></li>
+                <li><a href="#installation-boot9strap">Installation de boot9strap (MSET9)</a></li>
+                <li><a href="#voyant-d'alimentation-notification">Voyants d’alimentation/de notification</a></li>
+                <li><a href="#message-erreur-au-demarrage">Message d’erreur au démarrage</a></li>
+                <li><a href="#probleme-logiciel-micrologiciel-personnalise">Problèmes logiciels sur les consoles avec
+                        micrologiciel personnalisé</a></li>
+                <li><a href="#autres-depannage">Autres dépannages</a></li>
+            </ul>
+        </nav>
+        <section class="container-tuto" id="introduction">
             <div class="section-tuto">
                 <h1>Dépannage</h1>
                 <hr>
-                <p>Cette documentation, qui retraduit le site <a href="https://3ds.hacks.guide">3DS Hacks Guide</a> (alias Nintendo Homebrew), fournit des conseils de dépannage pour les problèmes courants.</p>
-                <p>Si les solutions proposées ne résolvent pas votre problème, nous vous invitons à rejoindre un des <a href="/nav/serveurs-conseilles.html">serveurs conseillés</a> et de décrire votre problème<br>ainsi que les étapes auquel vous avez déjà tentées.</p>
+                <p>Cette documentation, qui retraduit le site <a href="https://3ds.hacks.guide">3DS Hacks Guide</a>
+                    (alias Nintendo Homebrew), fournit des conseils de dépannage pour les problèmes courants.</p>
+                <p>Si les solutions proposées ne résolvent pas votre problème, nous vous invitons à rejoindre un des <a
+                        href="/nav/serveurs-conseilles.html">serveurs conseillés</a> et de décrire votre
+                    problème ainsi que les étapes auquel vous avez déjà tentées.</p>
             </div>
-            <div class="section-tuto">
+            <div class="section-tuto" id="installation-boot9strap">
                 <h2>Installation de boot9strap (MSET9)</h2>
                 <hr>
-            </div>
-            <details>
-                <summary>
-                    <u>Python 3 n'est pas installé</u>
-                </summary>
-                <p>
-                    Python n'est pas installé sur l'ordinateur que vous utilisez.<br>
-                    Téléchargez-le à partir du <a href="https://www.python.org/downloads/">site web de Python</a>, double-cliquez sur<br>
-                    le programme d'installation et suivez les instructions pour installer<br>
-                    Python. Une fois Python installé, réessayez.
-                </p>
-            </details>
-            <details>
-                <summary>
-                    <u>HOME Menu extdata : Manquant !</u>
-                </summary>
-                <p>Veuillez allumer votre console avec votre carte SD insérée, puis vérifiez à nouveau l'état de MSET9.</p>
-                <p>Si cela ne fonctionne pas, votre carte SD doit être formatée :</p>
-                <ol>
-                    <li>Copiez tout ce qui se trouve sur la carte SD sur votre PC</li>
-                    <li>Formatez la carte SD (Windows, Linux, macOS))</li>
-                    <li>Copiez tout à nouveau</li>
-                    <li>Recommencez à partir de la partie 1 Étape 7</li>
-                </ol>
-            </details>
-            <details>
-                <summary>
-                    <u>Éditeur Mii extdata : Manquant !</u>
-                </summary>
-                <p>
-                    Les données Mii Maker n’ont pas été trouvées sur la carte SD.<br>
-                    Veuillez allumer votre console avec votre SD insérée, puis lancer<br>
-                    Mii Maker, puis vérifier à nouveau l’état du MSET9.
-                </p>
-                <p>Si cela ne fonctionne pas, votre carte SD doit être formatée :</p>
-                <ol>
-                    <li>Copiez tout ce qui se trouve sur la carte SD sur votre PC</li>
-                    <li>Formatez la carte SD (Windows, Linux, macOS))</li>
-                    <li>Copiez tout à nouveau</li>
-                    <li>Recommencez à partir de la partie 1 Étape 8</li>
-                </ol>
-            </details>
-            <details>
-                <summary>
-                    <u>Base de données de titres : Non initialisée !</u>
-                </summary>
-                <p>
-                    Assurez-vous d’avoir réinitialisé la base de données des titres. + Veuillez
-                    allumer votre console avec votre SD insérée + Lancez les paramètres système
-                    et accédez à Data Management -> Nintendo 3DS -> Software -> Reset (image) +
-                    Cela n’effacera aucune de vos données + Si vous obtenez une invite de réinitialisation,
-                    après la réinitialisation, éteignez votre console et recommencez à partir de la partie 1 Étape 14
-                </p>
-                <p>Si vous ne recevez pas d’invite de réinitialisation, votre carte SD doit être formatée :</p>
-                <ol>
-                    <li>Copiez tout ce qui se trouve sur la carte SD sur votre PC</li>
-                    <li>Formatez la carte SD (Windows, Linux, macOS))</li>
-                    <li>Copiez tout à nouveau</li>
-                    <li>
-                    <p>Exécutez le script MSET9 :</p>
+                <details>
+                    <summary>Python 3 n'est pas installé</summary>
+                    <p>
+                        Python n'est pas installé sur l'ordinateur que vous utilisez.<br>
+                        Téléchargez-le à partir du <a href="https://www.python.org/downloads/">site web de Python</a>,
+                        double-cliquez sur<br>
+                        le programme d'installation et suivez les instructions pour installer<br>
+                        Python. Une fois Python installé, réessayez.
+                    </p>
+                </details>
+                <details>
+                    <summary>HOME Menu extdata : Manquant !</summary>
+                    <p>Veuillez allumer votre console avec votre carte SD insérée, puis vérifiez à nouveau l'état de
+                        MSET9.</p>
+                    <p>Si cela ne fonctionne pas, votre carte SD doit être formatée :</p>
+                    <ol>
+                        <li>Copiez tout ce qui se trouve sur la carte SD sur votre PC</li>
+                        <li>Formatez la carte SD (Windows, Linux, macOS))</li>
+                        <li>Copiez tout à nouveau</li>
+                        <li>Recommencez à partir de la partie 1 Étape 7</li>
+                    </ol>
+                </details>
+                <details>
+                    <summary>Éditeur Mii extdata : Manquant !</summary>
+                    <p>
+                        Les données Mii Maker n’ont pas été trouvées sur la carte SD.<br>
+                        Veuillez allumer votre console avec votre SD insérée, puis lancer<br>
+                        Mii Maker, puis vérifier à nouveau l’état du MSET9.
+                    </p>
+                    <p>Si cela ne fonctionne pas, votre carte SD doit être formatée :</p>
+                    <ol>
+                        <li>Copiez tout ce qui se trouve sur la carte SD sur votre PC</li>
+                        <li>Formatez la carte SD (Windows, Linux, macOS))</li>
+                        <li>Copiez tout à nouveau</li>
+                        <li>Recommencez à partir de la partie 1 Étape 8</li>
+                    </ol>
+                </details>
+                <details>
+                    <summary>Base de données de titres : Non initialisée !</summary>
+                    <p>
+                        Assurez-vous d’avoir réinitialisé la base de données des titres. + Veuillez
+                        allumer votre console avec votre SD insérée + Lancez les paramètres système
+                        et accédez à Data Management -> Nintendo 3DS -> Software -> Reset (image) +
+                        Cela n’effacera aucune de vos données + Si vous obtenez une invite de réinitialisation,
+                        après la réinitialisation, éteignez votre console et recommencez à partir de la partie 1 Étape
+                        14
+                    </p>
+                    <p>Si vous ne recevez pas d’invite de réinitialisation, votre carte SD doit être formatée :</p>
+                    <ol>
+                        <li>Copiez tout ce qui se trouve sur la carte SD sur votre PC</li>
+                        <li>Formatez la carte SD (Windows, Linux, macOS))</li>
+                        <li>Copiez tout à nouveau</li>
+                        <li>
+                            <p>Exécutez le script MSET9 :</p>
+                            <ul>
+                                <li>Windows : double-cliquez MSET9-Windows.bat</li>
+                                <li>macOS : double-cliquez sur MSET9-macOS.command et entrez votre mot de passe si vous
+                                    y êtes invité</li>
+                                <li>Linux : ouvrez une fenêtre de terminal, cd à la racine de votre carte SD, puis tapez
+                                    python3 mset9.py et appuyez sur Entrée</li>
+                            </ul>
+                        </li>
+                        <li>Saisissez le numéro correspondant au modèle et à la version de votre console, puis appuyez
+                            sur Entrée</li>
+                        <li>
+                            <p>Tapez 2 puis appuyez sur Entrée pour vérifier l’état du MSET9</p>
+                            <ul>
+                                <li>Cela créera à nouveau les bases de données factices</li>
+                            </ul>
+                        </li>
+                        <li>Fermer la fenêtre de script MSET9</li>
+                        <li>Recommencez à partir de la partie 1 Étape 12.</li>
+                    </ol>
+                </details>
+                <details>
+                    <summary>Erreur 01 : Impossible de trouver le dossier Nintendo 3DS</summary>
+                    <p>Vous n’exécutez pas MSET9 à partir de la racine de la carte SD, ou la carte SD n’a pas le dossier
+                        Nintendo 3DS.</p>
+                    <p>N’oubliez pas que votre carte SD doit ressembler à ceci :</p>
+                    <img src="" alt="Root Carte SD">
+                    <p>Si la disposition de votre carte SD est correcte, il est fort probable qu’elle ne soit pas lue
+                        par votre console et qu’elle doive être formatée :</p>
+                    <ol>
+                        <li>Copiez tout ce qui se trouve sur la carte SD sur votre PC</li>
+                        <li>Formatez la carte SD (Windows, Linux, macOS))</li>
+                        <li>Copiez tout à nouveau</li>
+                        <li>Recommencer à partir du début de la partie 1</li>
+                    </ol>
+                </details>
+                <details>
+                    <summary>Erreur 02 : Votre carte SD est protégée en écriture</summary>
+                    <p>
+                        La protection en écriture est activée sur cette carte SD.<br>
+                        Si vous utilisez une carte SD de taille normale, assurez-vous<br>
+                        que le verrou est basculé en position verticale. Sinon, essayez<br>
+                        d’éjecter et de réinsérer votre carte SD.
+                    </p>
+                    <img src="" alt="Image Carte SD lock en haut">
+                </details>
+                <details>
+                    <summary>Erreur 04 : Vous n’avez pas 1 ID0, vous avez (#) !</summary>
+                    <p>Vous disposez de plusieurs dossiers ID0. Pour déterminer le bon dossier, suivez ces instructions
+                        :</p>
+                    <ol>
+                        <li>Renommez le dossier Nintendo 3DS en BACKUP_Nintendo 3DS</li>
+                        <li>Réinsérez votre carte SD dans votre console</li>
+                        <li>Allumez votre console</li>
+                        <li>
+                            <p>Attendez que la console génère les données de la carte SD</p>
+                            <ul>
+                                <li>Vos applications auront disparu. Ceci est normal et sera résolu plus tard</li>
+                            </ul>
+                        </li>
+                        <li>Éteignez votre console</li>
+                        <li>Insérez votre carte SD dans votre ordinateur</li>
+                        <li>Naviguez vers le dossier Nintendo 3DS de votre carte SD</li>
+                        <li>
+                            <p>Notez les premiers caractères du dossier que vous voyez</p>
+                            <ul>
+                                <li>Il s’agit de votre véritable ID0, que nous conserverons dans le vrai dossier
+                                    Nintendo 3DS</li>
+                            </ul>
+                        </li>
+                        <li>Supprimez l’ID0 du dossier actuel de la Nintendo 3DS</li>
+                        <li>Déplacer le dossier true ID0 du dossier BACKUP_Nintendo 3DS vers le dossier Nintendo 3DS
+                        </li>
+                        <li>S’il existe, déplacez le dossier Private du dossier BACKUP_Nintendo 3DS vers le dossier
+                            Nintendo 3DS</li>
+                    </ol>
+                    <p>Une fois que vous avez fait cela, passez à l’étape 3 de la partie 1.</p>
+                </details>
+                <details>
+                    <summary> Erreur 05 : Vous n’avez pas 1 ID1, vous avez (#) !</summary>
+                    <p>
+                        Cela se produit lorsque vous utilisez plusieurs cartes SD avec la même 3DS,
+                        puis fusionnez le contenu de la carte SD. Les deux sont « valides », mais
+                        la 3DS ne peut en lire qu’un à la fois.
+                    </p>
+                    <p>
+                        Vous devrez déterminer lequel contient vos données.
+                        Tout d’abord, sauvegardez tous les dossiers, en cas de problème :
+                    </p>
+                    <img src="" alt="Contenu dossier Nintendo 3DS 1">
+                    <p>
+                        Maintenant, supprimez tous les dossiers sauf un de votre carte SD. En règle générale,
+                        vous voudrez supprimer le(s) plus petit(s) site(s), car celui avec toutes vos données
+                        aura probablement plus d’espace occupé. Vous pouvez comparer quel dossier occupe le
+                        plus d’espace en faisant un clic droit dessus et en cliquant sur « Propriétés » :
+                    </p>
+                    <img src="" alt="Contenu dossier Nintendo 3DS 2">
+                    <img src="" alt="Propriétés dossier ID0">
+                    <p>Votre carte SD devrait maintenant ressembler à ceci :</p>
+                    <img src="" alt="Contenu dossier Nintendo 3DS 3">
+                    <p>
+                        Maintenant, insérez votre carte SD dans votre 3DS et allumez-la.<br>
+                        Si vos données s’y trouvent toujours, vous avez supprimé le bon dossier<br>
+                        et vous avez maintenant déterminé votre ID1 correct. Si tout a disparu,<br>
+                        retournez dans le dossier de sauvegarde que vous avez créé précédemment<br>
+                        et essayez l’autre dossier.
+                    </p>
+                </details>
+                <details>
+                    <summary>Erreur 06 : Vous avez besoin d’au moins 16 Mo de libre</summary>
+                    <p>Votre carte SD n’a pas assez d’espace pour déclencher MSET9.<br>Libérez de l’espace et réessayez.
+                    </p>
+                    <p>
+                        À la fin de ce guide, vous aurez besoin d’au moins 1,3 Go pour effectuer une sauvegarde
+                        NAND,<br>
+                        il est donc préférable de libérer au moins autant.
+                    </p>
+                </details>
+                <details>
+                    <summary> Erreur 07 : Un ou plusieurs fichiers sont manquants ou mal formés !</summary>
+                    <p>Un ou plusieurs fichiers dont MSET9 a besoin pour s’exécuter sont manquants ou corrompus.<br>
+                        Téléchargez à nouveau la version MSET9 .zip et extrayez-la à la racine de votre carte SD,<br>
+                        en remplaçant tous les fichiers existants, puis réessayez.</p>
+                </details>
+                <details>
+                    <summary>Écran rouge après la réinsertion de la carte SD (Section II Étape 11)</summary>
+                    <p>
+                        Il se peut qu’il vous manque SafeB9S.bin à la racine de votre carte SD ou que<br>
+                        le fichier soit corrompu. Copiez-le à partir du .zip MSET9, en remplaçant tous<br>
+                        les fichiers existants, puis suivez ces instructions pour supprimer le<br>
+                        fichier déclencheur :
+                    </p>
+                    <ol>
+                        <li>Forcez l’arrêt de votre console en maintenant le bouton d’alimentation enfoncé pendant 20
+                            secondes</li>
+                        <li>Insérez votre carte SD dans votre ordinateur</li>
+                        <li>
+                            <p>Exécutez le script MSET9 :</p>
+                            <ul>
+                                <li>Windows : double-cliquez MSET9-Windows.bat</li>
+                                <li>macOS : double-cliquez sur MSET9-macOS.command et entrez votre mot de passe si vous
+                                    y êtes invité</li>
+                                <li>Linux : ouvrez une fenêtre de terminal, cd à la racine de votre carte SD, puis tapez
+                                    python3 mset9.py et appuyez sur Entrée</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <p>Saisissez le numéro correspondant au modèle et à la version de votre console, puis
+                                appuyez sur Entrée</p>
+                            <ul>
+                                <li>L’état actuel doit afficher Injected</li>
+                                <li>Si vous avez déjà supprimé le fichier déclencheur<br>(ou si vous ne l’avez jamais
+                                    injecté en premier lieu),<br>l’état actuel affichera Prêt, et vous pourrez réessayer
+                                    la Partie 2</li>
+                            </ul>
+                        </li>
+                        <li>Tapez 4, puis appuyez sur Entrée</li>
+                        <li>Une fois que la fenêtre indique « Fichier de déclencheur supprimé », tapez 0, puis appuyez
+                            sur Entrée</li>
+                        <li>Réinsérez la carte SD dans votre console</li>
+                        <li>Allumez votre console</li>
+                        <li>Retour à la partie 2 Étape 1</li>
+                    </ol>
+                    <p>
+                        Alternativement, votre carte SD peut être mal formatée ou<br>
+                        partitionnée. Après avoir supprimé le fichier déclencheur,<br>
+                        formatez-le :
+                    </p>
+                    <ol>
+                        <li>Copiez tout ce qui se trouve sur la carte SD sur votre PC</li>
+                        <li>Formatez la carte SD (Windows, Linux, macOS))</li>
+                        <li>Copiez tout à nouveau</li>
+                        <li>Recommencer à partir du début de la partie 1</li>
+                    </ol>
+                </details>
+                <details>
+                    <summary>Les paramètres système se chargent en continu après la réinsertion de la carte SD</summary>
+                    <p>
+                        Vous avez probablement fait quelque chose de différent des instructions MSET9,<br>
+                        sélectionné le mauvais modèle/version, ou votre carte SD doit être formatée.<br>
+                        Assurez-vous de choisir le modèle et la version du micrologiciel corrects<br>
+                        lorsque vous ouvrez le script.
+                    </p>
+                    <p>Suivez ces instructions pour supprimer le fichier déclencheur et réessayer la Partie 2 :</p>
+                    <ol>
+                        <li>Forcez l’arrêt de votre console en maintenant le bouton d’alimentation enfoncé pendant 20
+                            secondes</li>
+                        <li>Insérez votre carte SD dans votre ordinateur</li>
+                        <li>
+                            <p>Exécutez le script MSET9 :</p>
+                            <ul>
+                                <li>Windows : double-cliquez MSET9-Windows.bat</li>
+                                <li>macOS : double-cliquez sur MSET9-macOS.command et entrez votre mot de passe si vous
+                                    y êtes invité</li>
+                                <li>Linux : ouvrez une fenêtre de terminal, cd à la racine de votre carte SD, puis tapez
+                                    python3 mset9.py et appuyez sur Entrée</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <p>Saisissez le numéro correspondant au modèle et à la version de votre console, puis
+                                appuyez sur Entrée</p>
+                            <ul>
+                                <li>L’état actuel doit afficher Injected</li>
+                                <li>Si vous avez déjà supprimé le fichier déclencheur<br>(ou si vous ne l’avez jamais
+                                    injecté en premier lieu),<br>l’état actuel affichera Prêt, et vous pourrez réessayer
+                                    la Partie 2</li>
+                            </ul>
+                        </li>
+                        <li>Tapez 4, puis appuyez sur Entrée</li>
+                        <li>Une fois que la fenêtre indique « Fichier de déclencheur supprimé », tapez 0, puis appuyez
+                            sur Entrée</li>
+                        <li>Réinsérez la carte SD dans votre console</li>
+                        <li>Allumez votre console</li>
+                        <li>Retour à la partie 2 Étape 1</li>
+                    </ol>
+                    <p>
+                        Si vous continuez à avoir ce problème et que vous êtes<br>
+                        sûr d’avoir tout fait correctement, assurez-vous que le fichier<br>
+                        déclencheur est supprimé et formatez votre carte SD :
+                    </p>
+                    <ol>
+                        <li>Copiez tout ce qui se trouve sur la carte SD sur votre PC</li>
+                        <li>Formatez la carte SD (Windows, Linux, macOS))</li>
+                        <li>Copiez tout à nouveau</li>
+                        <li>Recommencer à partir du début de la partie 1</li>
+                    </ol>
+                </details>
+                <details>
+                    <summary>Une exception s’est produite après le déclenchement de MSET9</summary>
+                    <p>Cela indique probablement que vous disposez déjà d’un micrologiciel personnalisé.<br>Vous devriez
+                        vérifier la présence de CFW.</p>
+                </details>
+                <div class="section-tuto" id="voyant-d'alimentation-notification">
+                    <h2>Voyants d’alimentation/de notification</h2>
+                    <hr>
+                </div>
+                <details>
+                    <summary>Ma console s’éteint lorsque j’essaie de l’allumer et/ou<br>la LED de notification affiche une couleur au démarrage</summary>
+                    <p>
+                        Il y a un problème avec votre fichier boot.firm. Si vous<br>
+                        utilisez boot9strap 1.4, la LED de notification de votre<br>
+                        3DS peut clignoter d’une certaine couleur. Cette couleur<br>
+                        est utilisée pour diagnostiquer les problèmes impliquant<br>
+                        votre fichier boot.firm sur la carte SD ou la mémoire interne.<br>
+                        Sur les anciennes versions de boot9strap, le voyant bleu s’éteint<br>
+                        presque immédiatement lorsque vous essayez d’allumer la console.
+                    </p>
+                    <p>Si le voyant de notification clignote :</p>
                     <ul>
-                        <li>Windows : double-cliquez MSET9-Windows.bat</li>
-                        <li>macOS : double-cliquez sur MSET9-macOS.command et entrez votre mot de passe si vous y êtes invité</li>
-                        <li>Linux : ouvrez une fenêtre de terminal, cd à la racine de votre carte SD, puis tapez python3 mset9.py et appuyez sur Entrée</li>
+                        <li>Blanc : Votre 3DS n’a pas pu trouver boot.firm sur votre carte SD ou sur la mémoire interne.
+                        </li>
+                        <li>Magenta : Votre 3DS n’a pas réussi à trouver boot.firm sur votre carte SD. Il a pu trouver
+                            boot.firm sur la mémoire interne, mais le fichier est corrompu.</li>
+                        <li>Rouge : Votre 3DS a pu trouver boot.firm à la fois sur votre carte SD et sur la mémoire
+                            interne, mais les deux fichiers sont corrompus.</li>
                     </ul>
-                    </li>
-                    <li>Saisissez le numéro correspondant au modèle et à la version de votre console, puis appuyez sur Entrée</li>
-                    <li>
-                        <p>Tapez 2 puis appuyez sur Entrée pour vérifier l’état du MSET9</p>
-                        <ul>
-                            <li>Cela créera à nouveau les bases de données factices</li>
-                        </ul>
-                    </li>
-                    <li>Fermer la fenêtre de script MSET9</li>
-                    <li>Recommencez à partir de la partie 1 Étape 12.</li>
-                </ol>
-            </details>
-            <details>
-                <summary>
-                    <u>Erreur 01 : Impossible de trouver le dossier Nintendo 3DS</u>
-                </summary>
-                <p>Vous n’exécutez pas MSET9 à partir de la racine de la carte SD, ou la carte SD n’a pas le dossier Nintendo 3DS.</p>
-                <p>N’oubliez pas que votre carte SD doit ressembler à ceci :</p>
-                <img src="" alt="Root Carte SD">
-                <p>Si la disposition de votre carte SD est correcte, il est fort probable qu’elle ne soit pas lue par votre console et qu’elle doive être formatée :</p>
-                <ol>
-                    <li>Copiez tout ce qui se trouve sur la carte SD sur votre PC</li>
-                    <li>Formatez la carte SD (Windows, Linux, macOS))</li>
-                    <li>Copiez tout à nouveau</li>
-                    <li>Recommencer à partir du début de la partie 1</li>
-                </ol>
-            </details>
-            <details>
-                <summary>
-                    <u>Erreur 02 : Votre carte SD est protégée en écriture</u>
-                </summary>
-                <p>
-                    La protection en écriture est activée sur cette carte SD.<br>
-                    Si vous utilisez une carte SD de taille normale, assurez-vous<br>
-                    que le verrou est basculé en position verticale. Sinon, essayez<br>
-                    d’éjecter et de réinsérer votre carte SD.
-                </p>
-                <img src="" alt="Image Carte SD lock en haut">
-            </details>
-            <details>
-                <summary>
-                    <u>Erreur 04 : Vous n’avez pas 1 ID0, vous avez (#) !</u>
-                </summary>
-                <p>Vous disposez de plusieurs dossiers ID0. Pour déterminer le bon dossier, suivez ces instructions :</p>
-                <ol>
-                    <li>Renommez le dossier Nintendo 3DS en BACKUP_Nintendo 3DS</li>
-                    <li>Réinsérez votre carte SD dans votre console</li>
-                    <li>Allumez votre console</li>
-                    <li>
-                        <p>Attendez que la console génère les données de la carte SD</p>
-                        <ul>
-                            <li>Vos applications auront disparu. Ceci est normal et sera résolu plus tard</li>
-                        </ul>
-                    </li>
-                    <li>Éteignez votre console</li>
-                    <li>Insérez votre carte SD dans votre ordinateur</li>
-                    <li>Naviguez vers le dossier Nintendo 3DS de votre carte SD</li>
-                    <li>
-                        <p>Notez les premiers caractères du dossier que vous voyez</p>
-                        <ul>
-                            <li>Il s’agit de votre véritable ID0, que nous conserverons dans le vrai dossier Nintendo 3DS</li>
-                        </ul>
-                    </li>
-                    <li>Supprimez l’ID0 du dossier actuel de la Nintendo 3DS</li>
-                    <li>Déplacer le dossier true ID0 du dossier BACKUP_Nintendo 3DS vers le dossier Nintendo 3DS</li>
-                    <li>S’il existe, déplacez le dossier Private du dossier BACKUP_Nintendo 3DS vers le dossier Nintendo 3DS</li>
-                </ol>
-                <p>Une fois que vous avez fait cela, passez à l’étape 3 de la partie 1.</p>
-            </details>
-            <details>
-                <summary>
-                    <u>Erreur 05 : Vous n’avez pas 1 ID1, vous avez (#) !</u>
-                </summary>
-                <p>
-                    Cela se produit lorsque vous utilisez plusieurs cartes SD avec la même 3DS,
-                    puis fusionnez le contenu de la carte SD. Les deux sont « valides », mais
-                    la 3DS ne peut en lire qu’un à la fois.
-                </p>
-                <p>
-                    Vous devrez déterminer lequel contient vos données.
-                    Tout d’abord, sauvegardez tous les dossiers, en cas de problème :
-                </p>
-                <img src="" alt="Contenu dossier Nintendo 3DS 1">
-                <p>
-                    Maintenant, supprimez tous les dossiers sauf un de votre carte SD. En règle générale,
-                    vous voudrez supprimer le(s) plus petit(s) site(s), car celui avec toutes vos données
-                    aura probablement plus d’espace occupé. Vous pouvez comparer quel dossier occupe le
-                    plus d’espace en faisant un clic droit dessus et en cliquant sur « Propriétés » :
-                </p>
-                <img src="" alt="Contenu dossier Nintendo 3DS 2">
-                <img src="" alt="Propriétés dossier ID0">
-                <p>Votre carte SD devrait maintenant ressembler à ceci :</p>
-                <img src="" alt="Contenu dossier Nintendo 3DS 3">
-                <p>
-                    Maintenant, insérez votre carte SD dans votre 3DS et allumez-la.<br>
-                    Si vos données s’y trouvent toujours, vous avez supprimé le bon dossier<br>
-                    et vous avez maintenant déterminé votre ID1 correct. Si tout a disparu,<br>
-                    retournez dans le dossier de sauvegarde que vous avez créé précédemment<br>
-                    et essayez l’autre dossier.
-                </p>
-            </details>
-            <details>
-                <summary>
-                    <u>Erreur 06 : Vous avez besoin d’au moins 16 Mo de libre</u>
-                </summary>
-                <p>Votre carte SD n’a pas assez d’espace pour déclencher MSET9.<br>Libérez de l’espace et réessayez.</p>
-                <p>
-                    À la fin de ce guide, vous aurez besoin d’au moins 1,3 Go pour effectuer une sauvegarde NAND,<br>
-                    il est donc préférable de libérer au moins autant.
-                </p>
-            </details>
-            <details>
-                <summary>
-                    <u>Erreur 07 : Un ou plusieurs fichiers sont manquants ou mal formés !</u>
-                </summary>
-                <p>Un ou plusieurs fichiers dont MSET9 a besoin pour s’exécuter sont manquants ou corrompus.<br>
-                    Téléchargez à nouveau la version MSET9 .zip et extrayez-la à la racine de votre carte SD,<br>
-                    en remplaçant tous les fichiers existants, puis réessayez.</p>
-            </details>
-            <details>
-                <summary>
-                    <u>Écran rouge après la réinsertion de la carte SD (Section II Étape 11)</u>
-                </summary>
-                <p>
-                    Il se peut qu’il vous manque SafeB9S.bin à la racine de votre carte SD ou que<br>
-                    le fichier soit corrompu. Copiez-le à partir du .zip MSET9, en remplaçant tous<br>
-                    les fichiers existants, puis suivez ces instructions pour supprimer le<br>
-                    fichier déclencheur :
-                </p>
-                <ol>
-                    <li>Forcez l’arrêt de votre console en maintenant le bouton d’alimentation enfoncé pendant 20 secondes</li>
-                    <li>Insérez votre carte SD dans votre ordinateur</li>
-                    <li>
-                        <p>Exécutez le script MSET9 :</p>
-                        <ul>
-                            <li>Windows : double-cliquez MSET9-Windows.bat</li>
-                            <li>macOS : double-cliquez sur MSET9-macOS.command et entrez votre mot de passe si vous y êtes invité</li>
-                            <li>Linux : ouvrez une fenêtre de terminal, cd à la racine de votre carte SD, puis tapez python3 mset9.py et appuyez sur Entrée</li>
-                        </ul>
-                    </li>
-                    <li>
-                        <p>Saisissez le numéro correspondant au modèle et à la version de votre console, puis appuyez sur Entrée</p>
-                        <ul>
-                            <li>L’état actuel doit afficher Injected</li>
-                            <li>Si vous avez déjà supprimé le fichier déclencheur<br>(ou si vous ne l’avez jamais injecté en premier lieu),<br>l’état actuel affichera Prêt, et vous pourrez réessayer la Partie 2</li>
-                        </ul>
-                    </li>
-                    <li>Tapez 4, puis appuyez sur Entrée</li>
-                    <li>Une fois que la fenêtre indique « Fichier de déclencheur supprimé », tapez 0, puis appuyez sur Entrée</li>
-                    <li>Réinsérez la carte SD dans votre console</li>
-                    <li>Allumez votre console</li>
-                    <li>Retour à la partie 2 Étape 1</li>
-                </ol>
-                <p>
-                    Alternativement, votre carte SD peut être mal formatée ou<br>
-                    partitionnée. Après avoir supprimé le fichier déclencheur,<br>
-                    formatez-le :
-                </p>
-                <ol>
-                    <li>Copiez tout ce qui se trouve sur la carte SD sur votre PC</li>
-                    <li>Formatez la carte SD (Windows, Linux, macOS))</li>
-                    <li>Copiez tout à nouveau</li>
-                    <li>Recommencer à partir du début de la partie 1</li>
-                </ol>
-            </details>
-            <details>
-                <summary>
-                    <u>Les paramètres système se chargent en continu après la réinsertion de la carte SD</u>
-                </summary>
-                <p>
-                    Vous avez probablement fait quelque chose de différent des instructions MSET9,<br>
-                    sélectionné le mauvais modèle/version, ou votre carte SD doit être formatée.<br>
-                    Assurez-vous de choisir le modèle et la version du micrologiciel corrects<br>
-                    lorsque vous ouvrez le script.
-                </p>
-                <p>Suivez ces instructions pour supprimer le fichier déclencheur et réessayer la Partie 2 :</p>
-                <ol>
-                    <li>Forcez l’arrêt de votre console en maintenant le bouton d’alimentation enfoncé pendant 20 secondes</li>
-                    <li>Insérez votre carte SD dans votre ordinateur</li>
-                    <li>
-                        <p>Exécutez le script MSET9 :</p>
-                        <ul>
-                            <li>Windows : double-cliquez MSET9-Windows.bat</li>
-                            <li>macOS : double-cliquez sur MSET9-macOS.command et entrez votre mot de passe si vous y êtes invité</li>
-                            <li>Linux : ouvrez une fenêtre de terminal, cd à la racine de votre carte SD, puis tapez python3 mset9.py et appuyez sur Entrée</li>
-                        </ul>
-                    </li>
-                    <li>
-                        <p>Saisissez le numéro correspondant au modèle et à la version de votre console, puis appuyez sur Entrée</p>
-                        <ul>
-                            <li>L’état actuel doit afficher Injected</li>
-                            <li>Si vous avez déjà supprimé le fichier déclencheur<br>(ou si vous ne l’avez jamais injecté en premier lieu),<br>l’état actuel affichera Prêt, et vous pourrez réessayer la Partie 2</li>
-                        </ul>
-                    </li>
-                    <li>Tapez 4, puis appuyez sur Entrée</li>
-                    <li>Une fois que la fenêtre indique « Fichier de déclencheur supprimé », tapez 0, puis appuyez sur Entrée</li>
-                    <li>Réinsérez la carte SD dans votre console</li>
-                    <li>Allumez votre console</li>
-                    <li>Retour à la partie 2 Étape 1</li>
-                </ol>
-                <p>
-                    Si vous continuez à avoir ce problème et que vous êtes<br>
-                    sûr d’avoir tout fait correctement, assurez-vous que le fichier<br>
-                    déclencheur est supprimé et formatez votre carte SD :
-                </p>
-                <ol>
-                    <li>Copiez tout ce qui se trouve sur la carte SD sur votre PC</li>
-                    <li>Formatez la carte SD (Windows, Linux, macOS))</li>
-                    <li>Copiez tout à nouveau</li>
-                    <li>Recommencer à partir du début de la partie 1</li>
-                </ol>
-            </details>
-            <details>
-                <summary>
-                    <u>Une exception s’est produite après le déclenchement de MSET9</u>
-                </summary>
-                <p>Cela indique probablement que vous disposez déjà d’un micrologiciel personnalisé.<br>Vous devriez vérifier la présence de CFW.</p>
-            </details>
-            <div class="section-tuto">
-                <h2>Voyants d’alimentation/de notification</h2>
-                <hr>
+                    <p>
+                        Vous pouvez obtenir un nouveau fichier boot.firm en téléchargeant<br>
+                        la dernière version de Luma3DS, en l’extrayant et en plaçant boot.firm<br>
+                        à la racine de votre carte SD. Si votre fichier boot.firm est constamment<br>
+                        détecté comme corrompu, vous pouvez vérifier que votre carte SD ne contient<br>
+                        pas d’erreurs (Windows, Linux ou macOS). Notez également que le 3DS a tendance<br>
+                        à avoir des problèmes avec les fichiers extraits à l’aide de WinRAR.
+                    </p>
+                    <p>
+                        Si vous entendez un « bruit sec », potentiellement accompagné<br>
+                        d’un rétroéclairage allumé pendant une fraction de seconde, il<br>
+                        y a un problème matériel avec votre console (comme un câble de<br>
+                        rétroéclairage déconnecté). Vous pourrez peut-être faire démarrer<br>
+                        votre console en la tenant à certains angles.
+                    </p>
+                </details>
+                <details>
+                    <summary>Ma console reste bloquée sur un écran noir avec le voyant<br>d’alimentation bleu qui reste allumé</summary>
+                    <p>Les étapes ci-dessous peuvent être tentées dans n’importe quel ordre, mais sont répertoriées de
+                        la moins longue à la plus longue.</p>
+                    <ol>
+                        <li>Éteignez votre console, retirez la carte SD, réinsérez-la, puis allumez votre console.</li>
+                        <li>Éteignez votre console, éjectez la cartouche de jeu si elle est insérée, allumez votre
+                            console, puis attendez jusqu’à dix minutes. Si votre console démarre dans les dix minutes,
+                            le problème a été résolu et il est peu probable qu’il se reproduise</li>
+                        <li>
+                            <p>
+                                Renommez le dossier Nintendo 3DS de votre carte SD en Nintendo 3DS_BACKUP, puis essayez
+                                de démarrer. Si votre console démarre avec succès, il y a un problème dans votre dossier
+                                Nintendo 3DS. Essayez d’effacer HOME Menu extdata :
+                            </p>
+                            <ul>
+                                <li>Accédez à /Nintendo 3DS/<ID0>/<ID1>/extdata/00000000/</li>
+                                <li>
+                                    <p>Supprimez le dossier correspondant à votre région 3DS </p>
+                                    <ul>
+                                        <li>EUR Région : 00000098</li>
+                                        <li>Région JPN : 00000082</li>
+                                        <li>Région États-Unis : 0000008f</li>
+                                        <li>Région CHN : 000000A1</li>
+                                        <li>Région KOR : 000000A9</li>
+                                        <li>Région TWN : 000000B1</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <p>Essayez de démarrer en mode de récupération et de mettre à jour votre système :</p>
+                            <ul>
+                                <li>Éteignez votre console</li>
+                                <li>Maintenir (épaule gauche) + (épaule droite) + (D-pad vers le haut) + (A)</li>
+                                <li>Allumez votre console</li>
+                                <li>Si vous avez réussi, la console démarrera à partir d’un écran « Mettre à jour votre
+                                    système »</li>
+                            </ul>
+                        </li>
+                        <li>Suivez le guide CTRTransfer</li>
+                        <li>Pour plus d’aide, demandez de l’aide sur Nintendo Homebrew sur Discord</li>
+                    </ol>
+                </details>
             </div>
-            <details>
-                <summary>
-                    <u>Ma console s’éteint lorsque j’essaie de l’allumer et/ou<br>la LED de notification affiche une couleur au démarrage</u>
-                </summary>
-                <p>
-                    Il y a un problème avec votre fichier boot.firm. Si vous<br>
-                    utilisez boot9strap 1.4, la LED de notification de votre<br>
-                    3DS peut clignoter d’une certaine couleur. Cette couleur<br>
-                    est utilisée pour diagnostiquer les problèmes impliquant<br>
-                    votre fichier boot.firm sur la carte SD ou la mémoire interne.<br>
-                    Sur les anciennes versions de boot9strap, le voyant bleu s’éteint<br>
-                    presque immédiatement lorsque vous essayez d’allumer la console.
-                </p>
-                <p>Si le voyant de notification clignote :</p>
-                <ul>
-                    <li>Blanc : Votre 3DS n’a pas pu trouver boot.firm sur votre carte SD ou sur la mémoire interne.</li>
-                    <li>Magenta : Votre 3DS n’a pas réussi à trouver boot.firm sur votre carte SD. Il a pu trouver boot.firm sur la mémoire interne, mais le fichier est corrompu.</li>
-                    <li>Rouge : Votre 3DS a pu trouver boot.firm à la fois sur votre carte SD et sur la mémoire interne, mais les deux fichiers sont corrompus.</li>
-                </ul>
-                <p>
-                    Vous pouvez obtenir un nouveau fichier boot.firm en téléchargeant<br>
-                    la dernière version de Luma3DS, en l’extrayant et en plaçant boot.firm<br>
-                    à la racine de votre carte SD. Si votre fichier boot.firm est constamment<br>
-                    détecté comme corrompu, vous pouvez vérifier que votre carte SD ne contient<br>
-                    pas d’erreurs (Windows, Linux ou macOS). Notez également que le 3DS a tendance<br>
-                    à avoir des problèmes avec les fichiers extraits à l’aide de WinRAR.
-                </p>
-                <p>
-                    Si vous entendez un « bruit sec », potentiellement accompagné<br>
-                    d’un rétroéclairage allumé pendant une fraction de seconde, il<br>
-                    y a un problème matériel avec votre console (comme un câble de<br>
-                    rétroéclairage déconnecté). Vous pourrez peut-être faire démarrer<br>
-                    votre console en la tenant à certains angles.
-                </p>
-            </details>
-            <details>
-                <summary>
-                    <u>Ma console reste bloquée sur un écran noir avec le voyant<br>d’alimentation bleu qui reste allumé</u>
-                </summary>
-                <p>Les étapes ci-dessous peuvent être tentées dans n’importe quel ordre, mais sont répertoriées de la moins longue à la plus longue.</p>
-                <ol>
-                    <li>Éteignez votre console, retirez la carte SD, réinsérez-la, puis allumez votre console.</li>
-                    <li>Éteignez votre console, éjectez la cartouche de jeu si elle est insérée, allumez votre console, puis attendez jusqu’à dix minutes. Si votre console démarre dans les dix minutes, le problème a été résolu et il est peu probable qu’il se reproduise</li>
-                    <li>
-                        <p>
-                            Renommez le dossier Nintendo 3DS de votre carte SD en Nintendo 3DS_BACKUP, puis essayez de démarrer. Si votre console démarre avec succès, il y a un problème dans votre dossier Nintendo 3DS. Essayez d’effacer HOME Menu extdata :
-                        </p>
-                        <ul>
-                            <li>Accédez à /Nintendo 3DS/<ID0>/<ID1>/extdata/00000000/</li>
-                            <li>
-                                <p>Supprimez le dossier correspondant à votre région 3DS </p>
-                                <ul>
-                                    <li>EUR Région : 00000098</li>
-                                    <li>Région JPN : 00000082</li>
-                                    <li>Région États-Unis : 0000008f</li>
-                                    <li>Région CHN : 000000A1</li>
-                                    <li>Région KOR : 000000A9</li>
-                                    <li>Région TWN : 000000B1</li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </li>
-                    <li>
-                        <p>Essayez de démarrer en mode de récupération et de mettre à jour votre système :</p>
-                        <ul>
-                            <li>Éteignez votre console</li>
-                            <li>Maintenir (épaule gauche) + (épaule droite) + (D-pad vers le haut) + (A)</li>
-                            <li>Allumez votre console</li>
-                            <li>Si vous avez réussi, la console démarrera à partir d’un écran « Mettre à jour votre système »</li>
-                        </ul>
-                    </li>
-                    <li>Suivez le guide CTRTransfer</li>
-                    <li>Pour plus d’aide, demandez de l’aide sur Nintendo Homebrew sur Discord</li>
-                </ol>
-            </details>
-            <div class="section-tuto">
+            <div class="section-tuto" id="message-erreur-au-demarrage">
                 <h2>Message d’erreur au démarrage</h2>
                 <hr>
-            </div>
             <details>
-                <summary>
-                    <u>« Une erreur s’est produite : Échec de l’application de 1 correctif FIRM » ou « Une exception s’est produite -- Processus en cours : pm »</u>
-                </summary>
+                <summary>« Une erreur s’est produite : Échec de l’application de 1 correctif FIRM » ou « Une exception s’est produite -- Processus en cours : pm »</summary>
                 <p>
                     Votre version de Luma3DS est obsolète. Téléchargez la dernière version<br>
                     de Luma3DS et placez boot.firm à la racine de votre carte SD, en remplaçant<br>
@@ -413,26 +445,21 @@
                 </p>
             </details>
             <details>
-                <summary>
-                    <u>"Impossible de monter CTRNAND ou de charger le CTRNAND FIRM. Veuillez en utiliser un externe.</u>
-                </summary>
+                <summary>"Impossible de monter CTRNAND ou de charger le CTRNAND FIRM. Veuillez en utiliser un externe.</summary>
                 <p>Il y a un certain nombre de raisons pour lesquelles cela pourrait se produire.<br>
                     Dans tous les cas, cette erreur peut généralement être corrigée en suivant le guide CTRTransfer.</p>
             </details>
             <details>
-                <summary>
-                    <u>« Une erreur s’est produite. Maintenez le bouton POWER enfoncé pour couper l’alimentation...</u>
-                </summary>
+                <summary>« Une erreur s’est produite. Maintenez le bouton POWER enfoncé pour couper l’alimentation...</summary>
                 <p>Les gestionnaires d’exceptions ARM11 sont désactivés ou le micrologiciel personnalisé<br>
                     n’est pas installé. Essayez d’activer les gestionnaires d’exceptions ARM11 : + Éteindre<br>
-                    votre console + Maintenir (Sélectionner) + Allumer votre console, tout en maintenant (Sélectionner)<br>
+                    votre console + Maintenir (Sélectionner) + Allumer votre console, tout en maintenant
+                    (Sélectionner)<br>
                     + Si la case « Désactiver les gestionnaires d’exceptions ARM11 » est cochée, décochez-la
                 </p>
             </details>
             <details>
-                <summary>
-                    <u>Il manque des applications installées dans le menu HOME</u>
-                </summary>
+                <summary>Il manque des applications installées dans le menu HOME</summary>
                 <p>
                     Cela peut être dû à diverses raisons, mais très probablement parce que votre carte SD<br>
                     n’est pas lue par le système. Vous pouvez vérifier si votre SD est en cours de lecture<br>
@@ -440,21 +467,25 @@
                     s’il indique « Booted from CTRNAND via B9S », alors votre console démarre à partir de la<br>
                     mémoire interne et non à partir de la carte SD. Si tel est le cas, essayez les étapes<br>
                     ci-dessous, qui sont énumérées du plus facile au plus difficile :
-                    <ol>
-                        <li>Éteignez votre console, retirez la carte SD, réinsérez-la, puis allumez votre console</li>
-                        <li>Éteignez votre console, retirez la carte SD, insérez-la dans votre ordinateur, téléchargez la dernière version de Luma3DS, extrayez boot.firm du Luma3DS.zip et placez-le à la racine de votre carte SD (en remplaçant tout fichier existant)</li>
-                        <li>Éteignez votre console, retirez la carte SD, insérez-la dans votre ordinateur et reformulez votre carte SD en fonction du système d’exploitation de votre ordinateur : Windows, macOS, Linux (cela effacera les données de votre carte SD)</li>
-                        <li>Testez votre carte SD pour détecter les erreurs en suivant le guide en fonction du système d’exploitation de votre ordinateur : Windows, Linux, macOS. Si votre carte SD est marquée comme défectueuse, vous devrez remplacer votre carte SD</li>
-                        <li>Il se peut que l’emplacement de votre carte SD soit cassé. Rejoignez Nintendo Homebrew sur Discord pour obtenir de l’aide supplémentaire</li>
-                    </ol>
+                <ol>
+                    <li>Éteignez votre console, retirez la carte SD, réinsérez-la, puis allumez votre console</li>
+                    <li>Éteignez votre console, retirez la carte SD, insérez-la dans votre ordinateur, téléchargez la
+                        dernière version de Luma3DS, extrayez boot.firm du Luma3DS.zip et placez-le à la racine de votre
+                        carte SD (en remplaçant tout fichier existant)</li>
+                    <li>Éteignez votre console, retirez la carte SD, insérez-la dans votre ordinateur et reformulez
+                        votre carte SD en fonction du système d’exploitation de votre ordinateur : Windows, macOS, Linux
+                        (cela effacera les données de votre carte SD)</li>
+                    <li>Testez votre carte SD pour détecter les erreurs en suivant le guide en fonction du système
+                        d’exploitation de votre ordinateur : Windows, Linux, macOS. Si votre carte SD est marquée comme
+                        défectueuse, vous devrez remplacer votre carte SD</li>
+                    <li>Il se peut que l’emplacement de votre carte SD soit cassé. Rejoignez Nintendo Homebrew sur
+                        Discord pour obtenir de l’aide supplémentaire</li>
+                </ol>
                 </p>
             </details>
             <details>
-                <summary>
-                    <u>Écran bleu « BOOTROM ERROR »</u>
-                </summary>
-                <p
-                >Votre console est probablement en briques dures. Vous devrez acheter un flashcart<br>
+                <summary>Écran bleu « BOOTROM ERROR »</summary>
+                <p>Votre console est probablement en briques dures. Vous devrez acheter un flashcart<br>
                     ntrboot pour réinstaller boot9strap afin d’essayer de réparer votre console.<br>
                     Cela peut également indiquer un problème matériel qui ne peut pas être résolu.<br>
                     Dans tous les cas, rejoignez Nintendo Homebrew sur Discord pour obtenir de l’aide.<br>
@@ -464,18 +495,17 @@
                 </p>
             </details>
             <details>
-                <summary>
-                    <u>Une autre erreur</u>
-                </summary>
-                <p>Veuillez prendre une photo de l’erreur et rejoindre Nintendo Homebrew sur Discord pour obtenir de l’aide.</p>
+                <summary>Une autre erreur</summary>
+                <p>Veuillez prendre une photo de l’erreur et rejoindre Nintendo Homebrew sur Discord pour obtenir de
+                    l’aide.</p>
             </details>
-            <div class="section-tuto">
+            <div class="section-tuto" id="probleme-logiciel-micrologiciel-personnalise">
                 <h2>Problèmes logiciels sur les consoles avec micrologiciel personnalisé</h2>
                 <hr>
             </div>
             <details>
                 <summary>
-                    <u>La fonctionnalité DSi / DS est cassée ou a été remplacée par Flipnote Studio</u>
+                    La fonctionnalité DSi / DS est cassée ou a été remplacée par Flipnote Studio
                 </summary>
                 <ol>
                     <li>Téléchargez la dernière version de TWLFix-CFW (le fichier .3dsx)</li>
@@ -488,18 +518,18 @@
                     <li>Appuyez sur (A) pour désinstaller les titres TWL cassés</li>
                     <li>Appuyez sur (Démarrer) pour redémarrer la console</li>
                     <li>
-                        <p>Mettez à jour votre console en allant dans les paramètres système, puis dans « Autres paramètres », puis en allant tout à droite et en utilisant « Mise à jour du système »</p>
+                        <p>Mettez à jour votre console en allant dans les paramètres système, puis dans « Autres
+                            paramètres », puis en allant tout à droite et en utilisant « Mise à jour du système »</p>
                         <ul>
-                            <li>La mise à jour verra que les titres essentiels de TWL ont été désinstallés, et les téléchargera et les réinstallera</li>
+                            <li>La mise à jour verra que les titres essentiels de TWL ont été désinstallés, et les
+                                téléchargera et les réinstallera</li>
                         </ul>
                     </li>
                     <li>Une fois la mise à jour terminée, appuyez sur « OK » pour redémarrer la console</li>
                 </ol>
             </details>
             <details>
-                <summary>
-                    <u>La fonctionnalité de la console virtuelle GBA et/ou du mode sans échec est défectueuse</u>
-                </summary>
+                <summary>La fonctionnalité de la console virtuelle GBA et/ou du mode sans échec est défectueuse</summary>
                 <p>
                     Votre console exécute Luma3DS 6.6 ou une version antérieure, probablement<br>
                     via arm9loaderhax. Vous devez suivre A9LH vers B9S pour mettre à jour votre<br>
@@ -508,13 +538,14 @@
             </details>
             <details>
                 <summary>
-                    <u>Les jeux en mode mémoire étendue (Pokemon Sun/Moon, Smash, etc.) ne fonctionnent pas</u>
+                    Les jeux en mode mémoire étendue (Pokemon Sun/Moon, Smash, etc.) ne fonctionnent pas
                 </summary>
-                <p>Cela peut se produire après un CTRTransfer ou un changement de région sur Old 3DS / 2DS. Suivez les instructions ici pour résoudre ce problème (en ignorant les étapes 3, 4, 5 et 6).</p>
+                <p>Cela peut se produire après un CTRTransfer ou un changement de région sur Old 3DS / 2DS. Suivez les
+                    instructions ici pour résoudre ce problème (en ignorant les étapes 3, 4, 5 et 6).</p>
             </details>
             <details>
                 <summary>
-                    <u>Écran d’exception lors du démarrage/chargement d’une application</u>
+                    Écran d’exception lors du démarrage/chargement d’une application
                 </summary>
                 <p>
                     Recherchez votre écran d’exception sur cette page. Si vous n’avez pas<br>
@@ -524,7 +555,8 @@
             </details>
             <details>
                 <summary>
-                    <u>L’ouverture des paramètres du menu HOME fait planter la console ou charge le Homebrew Launcher</u>
+                    L’ouverture des paramètres du menu HOME fait planter la console ou charge le Homebrew
+                    Launcher
                 </summary>
                 <p>
                     Il est probable que menuhax67 soit toujours installé sur votre console.<br>
@@ -532,13 +564,13 @@
                     (le .zip menuhax), puis suivez la section « Désinstaller menuhax67 » ici.<br>
                 </p>
             </details>
-            <div class="section-tuto">
+            <div class="section-tuto" id="autres-depannage">
                 <h2>Autres dépannages</h2>
                 <hr>
             </div>
             <details>
                 <summary>
-                    <u>Effacer HOME Menu extdata</u>
+                    Effacer HOME Menu extdata
                 </summary>
                 <ol>
                     <li>Éteignez votre console</li>
@@ -560,7 +592,7 @@
             </details>
             <details>
                 <summary>
-                    <u>Effacer les données du thème du menu HOME</u>
+                    Effacer les données du thème du menu HOME
                 </summary>
                 <ol>
                     <li>Éteignez votre console</li>
@@ -579,7 +611,7 @@
             </details>
             <details>
                 <summary>
-                    <u>Saisie manuelle du Homebrew Launcher</u>
+                    Saisie manuelle du Homebrew Launcher
                 </summary>
                 <p>
                     Si l’application Homebrew Launcher ne vous parvient pas dans<br>
@@ -590,7 +622,8 @@
                 <ol>
                     <li>Lancez l’application Mode téléchargement</li>
                     <li>Attendez de voir les boutons Nintendo 3DS et Nintendo DS</li>
-                    <li>Appuyez sur (épaule gauche) + (D-Pad bas) + (Sélectionner) en même temps pour ouvrir le menu Rosalina</li>
+                    <li>Appuyez sur (épaule gauche) + (D-Pad bas) + (Sélectionner) en même temps pour ouvrir le menu
+                        Rosalina</li>
                     <li>Sélectionnez « Options diverses »</li>
                     <li>Sélectionnez "Changer le hb. titre de l’application actuelle.</li>
                     <li>Appuyez sur (B) pour continuer</li>
@@ -602,14 +635,15 @@
                     <li>
                         <p>Votre console doit charger le Homebrew Launcher</p>
                         <ul>
-                            <li>Si votre console est bloquée sur l’écran de démarrage de chargement, il vous manque boot.3dsx à partir de la racine de votre carte SD</li>
+                            <li>Si votre console est bloquée sur l’écran de démarrage de chargement, il vous manque
+                                boot.3dsx à partir de la racine de votre carte SD</li>
                         </ul>
                     </li>
                 </ol>
             </details>
             <details>
                 <summary>
-                    <u>Désactiver le contrôle parental</u>
+                    Désactiver le contrôle parental
                 </summary>
                 <p>
                     Vous pouvez désactiver la fonction de contrôle parental en allant<br>
@@ -624,13 +658,17 @@
                     <li>
                         <p>Remplissez les cases suivantes avec les informations :</p>
                         <ul>
-                            <li>Type d’appareil : Sélectionnez « 3DS » (il en va de même si vous utilisez une 2DS, une nouvelle 3DS (XL/LL) ou une nouvelle 2DS (XL/LL))</li>
+                            <li>Type d’appareil : Sélectionnez « 3DS » (il en va de même si vous utilisez une 2DS, une
+                                nouvelle 3DS (XL/LL) ou une nouvelle 2DS (XL/LL))</li>
                             <li>Date système : le jour et le mois où l’horloge de votre console est réglée sur</li>
-                            <li>Numéro de demande : Peut être obtenu en appuyant sur « Code PIN oublié » puis « J’ai oublié » dans l’écran de contrôle parental</li>
+                            <li>Numéro de demande : Peut être obtenu en appuyant sur « Code PIN oublié » puis « J’ai
+                                oublié » dans l’écran de contrôle parental</li>
                         </ul>
                     </li>
-                    <li>Une fois que vous avez obtenu votre mkey, appuyez sur OK sur l’écran où vous avez obtenu votre numéro de demande, puis saisissez la clé maîtresse</li>
-                    <li>Appuyez sur « Effacer les paramètres », puis sur « Supprimer » pour supprimer toutes les données du contrôle parental</li>
+                    <li>Une fois que vous avez obtenu votre mkey, appuyez sur OK sur l’écran où vous avez obtenu votre
+                        numéro de demande, puis saisissez la clé maîtresse</li>
+                    <li>Appuyez sur « Effacer les paramètres », puis sur « Supprimer » pour supprimer toutes les données
+                        du contrôle parental</li>
                 </ol>
             </details>
         </section>
@@ -639,4 +677,5 @@
         <p>Copyright 2024 &copy; Hack 3DS FR. Tous droits réservés.</p>
     </footer>
 </body>
+
 </html>

@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="/css/styles.css">
     <link rel="icon" href="/assets/images/icons/hack_3ds_fr_logo.png"/>
     <title>MSET9 PC | Hack 3DS FR</title>
+    <script type="text/javascript" src="/js/darkmode.js" defer></script>
 </head>
 <body>
     <div class="menu">
@@ -15,7 +16,7 @@
                 <a href="">Documentation</a>
                 <ul class="sous-menu">
                     <li><a href="">Pour les débutants</a></li>
-                    <li><a href="nav/docs/hacker-sa-3ds.html">Hacker sa 3DS</a></li>
+                    <li><a href="/nav/docs/hacker-sa-3ds.html">Hacker sa 3DS</a></li>
                     <li><a href="">Vérifier le hack</a></li>
                 </ul>
             </li>
@@ -23,24 +24,41 @@
             <li><a href="">Logiciel 3DS/PC</a></li>
             <li><a href="/nav/apropos.html">À Propos</a></li>
         </ul>
+        <button id="theme-switch">
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"><path d="M480-120q-150 0-255-105T120-480q0-150 105-255t255-105q14 0 27.5 1t26.5 3q-41 29-65.5 75.5T444-660q0 90 63 153t153 63q55 0 101-24.5t75-65.5q2 13 3 26.5t1 27.5q0 150-105 255T480-120Z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"><path d="M480-280q-83 0-141.5-58.5T280-480q0-83 58.5-141.5T480-680q83 0 141.5 58.5T680-480q0 83-58.5 141.5T480-280ZM200-440H40v-80h160v80Zm720 0H760v-80h160v80ZM440-760v-160h80v160h-80Zm0 720v-160h80v160h-80ZM256-650l-101-97 57-59 96 100-52 56Zm492 496-97-101 53-55 101 97-57 59Zm-98-550 97-101 59 57-100 96-56-52ZM154-212l101-97 55 53-97 101-59-57Z"/></svg>
+        </button>
     </div>
     <main>
-        <section class="container-tuto">
+        <nav class="table-des-matieres">
+            <h2>Table des matières</h2>
+            <ul>
+                <li><a href="#introduction">Installation boot9strap (MSET9)</a></li>
+                <li><a href="#info-importante">Information Importante</a></li>
+                <li><a href="#ce-dont-vous-avez-besoin">Ce dont vous avez besoin</a></li>
+                <li><a href="#instructions">Instructions</a></li>
+                <li><a href="#partie1">Partie 1 - Mise en place</a></li>
+                <li><a href="#partie2">Partie 2 - Ajout du hack via MSET9</a></li>
+                <li><a href="#partie3">Partie 3 - Installation de boot9strap</a></li>
+                <li><a href="#partie4">Partie 4 - Suppression de MSET9</a></li>
+            </ul>
+        </nav>
+        <section class="container-tuto" id="introduction">
             <div class="section-tuto">
                 <h1>Installation boot9strap (MSET9)</h1>
                 <hr>
                 <p>Nous utiliserons cette méthode pour pirater votre Nintendo 3DS car elle c'est tout simplement la plus simple à réaliser, et c'est celle que nous recommandons</p>
             </div>
-            <div class="section-tuto">
+            <div class="section-tuto" id="info-importante">
                 <h2>Information Importante</h2>
                 <p>Nous nous appuyons sur les instructions des différents sites que nous considérons comme les meilleurs.</p>
                 <p>En effet, nous accordons notre confiance à ces auteurs, car ils sont à l'origine de ces méthodes.</p>
                 <p>(Les auteurs sont mentionnés en fin de page, merci à eux)</p>
                 <p>Cette méthode nécessite un ordinateur fonctionnant sous Windows, Linux ou macOS.</p>
-                <p>Si vous êtes sur téléphone / tablette Android ou un Chromebook, suivez <a href="/nav/docs/boo9strap-mset9-android-chromebook.html">cette méthode</a>.</p>
-                <p>Si vous n'avez accès à aucun de ces appareils, vous devrez utiliser une <a href="https://wiki.hacks.guide/wiki/3DS:Alternate_Exploits">autre méthode</a>.</p>
+                <p>Si vous êtes sur téléphone / tablette Android ou un Chromebook, suivez <a href="/nav/docs/boo9strap-mset9-android-chromebook.html" target="_blank">cette méthode</a>.</p>
+                <p>Si vous n'avez accès à aucun de ces appareils, vous devrez utiliser une <a href="https://wiki.hacks.guide/wiki/3DS:Alternate_Exploits" target="_blank" >autre méthode</a>.</p>
             </div>
-            <div class="section-tuto">
+            <div class="section-tuto" id="ce-dont-vous-avez-besoin">
                 <h2>Ce dont vous avez besoin</h2>
                 <ul>
                     <li class="execution-mset9">La dernière version de <a href="">MSET9 FR</a></li>
@@ -52,16 +70,17 @@
                     </ul>
                 </ul>
             </div>
-                <div class="section-tuto">
+                <div class="section-tuto" #instructions">
                     <h2>Instruction</h2>
                     <p>Sur cette page, vous allez utiliser le script MSET9, conçu pour déclencher MSET9. </p>
                     <br>
                     <p>Pendant l'exécution du script, les données de l'utilisateur disparaissent temporairement, mais elles seront réintégrées à la fin de la procédure. En cas d'erreur lors de l'exécution,</p>
                     <p>la solution se trouve probablement sur la page de <a href="/nav/docs/depannage.html">dépannage</a>.</p>
                 </div>
-                <div class="section-tuto">
+                <div class="section-tuto" id="partie1">
                     <h2>Partie 1 - Mise en place</h2>
-                    <p>Dans cette partie, vous allez préparer l’exploit MSET9 en créant temporairement un nouveau profil de menu HOME sans données utilisateur, puis en configurant ce profil avec uniquement les données minimales requises pour que MSET9 se déclenche. Vos données utilisateur existantes disparaîtront, mais reviendront lorsque vous aurez terminé avec cette page.</p>
+                    <p>Dans cette partie, vous allez préparer l’exploit MSET9 en créant temporairement un nouveau profil de menu HOME sans données utilisateur,puis en configurant ce profil avec uniquement les données minimales requises pour que MSET9 se déclenche.</p>
+                    <p>Vos données utilisateur existantes disparaîtront, mais reviendront lorsque vous aurez terminé avec cette page.</p>
                     <p>1. Insérez votre carte SD dans votre ordinateur</p>
                     <p>2. Copiez l'intégralité du contenu du dossier 'Ouvrir le dossier et A placer dans la carte SD' situé dans le fichier .zip, puis collez-le à la racine de votre carte SD, en remplaçant les fichiers existants si nécessaire.</p>
                     <p>3. Executez le script MSET9 :</p>
@@ -117,7 +136,7 @@
                     <p>17. Tapez 0, puis appuyez sur Entrée pour fermer le script</p>
                     <p>18. Réinsérez votre carte SD dans votre console</p>
                 </div>
-                <div class="section-tuto">
+                <div class="section-tuto" id="partie2">
                     <h2>Partie 2 - Ajout du hack via MSET9</h2>
                     <p>Dans cette partie, vous allez déclencher MSET9 pour lancer SafeB9SInstaller (l’installateur de firmware personnalisé).</p>
                     <p>1. Mettez votre console sous tension en vous assurant que les paramètres système sont sélectionnés.</p>
@@ -150,7 +169,7 @@
                         <li class="execution-mset9">Si vous obtenez un écran rouge ou si la console reste bloquée sur un écran de chargement, suivez le guide de dépannage</li>
                     </ul>
                 </div>
-                <div class="section-tuto">
+                <div class="section-tuto" id="partie3">
                     <h2>Partie 3 - Installation de boot9strap</h2>
                     <p>Dans cette partie, vous allez installer un firmware personnalisé sur votre console.</p>
                     <p>1. Lorsque vous y êtes invité, entrez la combinaison de touches indiquée sur l’écran supérieur pour installer boot9strap</p>
@@ -166,7 +185,7 @@
                     </ul>
                     <p>4. Appuyez sur (Start) pour enregistrer les modifications et redémarrer</p>
                 </div>
-                <div class="section-tuto">
+                <div class="section-tuto" id="partie4">
                     <h2>Partie 4 - Suppression de MSET9</h2>
                     <p>
                         Dans cette partie, vous allez supprimer MSET9 pour éviter d’autres problèmes et restaurer vos données utilisateur (jeux, thèmes, etc.). (Cela ne supprimera pas le micrologiciel personnalisé que vous venez d’installer.)
@@ -193,7 +212,7 @@
                         <li class="execution-mset9">Vous devriez voir « Suppression réussie de MSET9 ! »</li>
                     </ul>
                     <p>7. Appuyez sur Entrée pour fermer le script MSET9</p>
-                    <div>
+                    <div class="information">
                         <p>À partir d’ici, votre console démarrera sur Luma3DS par défaut.</p>
                         <ul>
                             <li class="execution-mset9">Luma3DS ne présente aucune différence visuelle avec le menu HOME normal. Si votre console a démarré dans le menu HOME, elle exécute un firmware personnalisé.</li>
