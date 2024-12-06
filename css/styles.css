@@ -267,13 +267,6 @@ body{
 .execution-mset9{
     margin-top: 10px;
 }
-code{
-    background-color: var(--theme-emplacement-2);
-    color: var(--theme-emplacement);
-    font-size: .875em;
-    border-radius: 4px;
-    padding: 3px 6px;
-}
 .section-tuto details {
     margin-left: 200px; 
     margin-right: 200px;
@@ -363,6 +356,13 @@ code{
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     max-width: 800px;
     line-height: 25px;
+}
+.information-backtik{
+    background-color: var(--theme-emplacement-2);
+    color: var(--theme-emplacement);
+    font-size: .875em;
+    border-radius: 4px;
+    padding: 3px 6px;
 }
 .disclaimer-box > details{
     background-color: var(--theme-disclaimer-box1);
