@@ -44,13 +44,14 @@
             </ul>
         </nav>
         <section class="container-tuto" id="introduction">
-            <div class="section-tuto">
+            <div class="section-tuto-2">
                 <h1>Installation boot9strap (MSET9)</h1>
                 <hr>
                 <p>Nous utiliserons cette méthode pour pirater votre Nintendo 3DS car elle c'est tout simplement la plus simple à réaliser, et c'est celle que nous recommandons</p>
             </div>
-            <div class="section-tuto" id="info-importante">
+            <div class="section-tuto-2" id="info-importante">
                 <h2>Information Importante</h2>
+                <hr>
                 <p>Nous nous appuyons sur les instructions des différents sites que nous considérons comme les meilleurs.</p>
                 <p>En effet, nous accordons notre confiance à ces auteurs, car ils sont à l'origine de ces méthodes.</p>
                 <p>(Les auteurs sont mentionnés en fin de page, merci à eux)</p>
@@ -58,31 +59,31 @@
                 <p>Si vous êtes sur téléphone / tablette Android ou un Chromebook, suivez <a href="/nav/docs/boo9strap-mset9-android-chromebook.html" target="_blank">cette méthode</a>.</p>
                 <p>Si vous n'avez accès à aucun de ces appareils, vous devrez utiliser une <a href="https://wiki.hacks.guide/wiki/3DS:Alternate_Exploits" target="_blank" >autre méthode</a>.</p>
             </div>
-            <div class="section-tuto" id="ce-dont-vous-avez-besoin">
+            <div class="section-tuto-2" id="ce-dont-vous-avez-besoin">
                 <h2>Ce dont vous avez besoin</h2>
+                <hr>
                 <ul>
                     <li class="execution-mset9">La dernière version de <a href="">MSET9 FR</a></li>
                     <li class="execution-mset9">Une version 3.x de <a href="">Python</a> <b>installé sur votre ordinateur</b></li>
                     <li class="execution-mset9">Si vous êtes sous Linux ou macOS, vous avez peut-être déjà Python 3.</li>
-                    <ul>
-                        <li class="execution-mset9">Vérifiez en ouvrant une fenêtre de terminal et en entrant python3 -V.</li>
-                        <li class="execution-mset9">Si cela renvoie un numéro de version, cela fonctionnera pour ce guide.</li>
-                    </ul>
                 </ul>
             </div>
-                <div class="section-tuto" #instructions">
+                <div class="section-tuto-2" id="instructions">
                     <h2>Instruction</h2>
+                    <hr>
                     <p>Sur cette page, vous allez utiliser le script MSET9, conçu pour déclencher MSET9. </p>
                     <br>
                     <p>Pendant l'exécution du script, les données de l'utilisateur disparaissent temporairement, mais elles seront réintégrées à la fin de la procédure. En cas d'erreur lors de l'exécution,</p>
                     <p>la solution se trouve probablement sur la page de <a href="/nav/docs/depannage.html">dépannage</a>.</p>
                 </div>
-                <div class="section-tuto" id="partie1">
+                <div class="section-tuto-2" id="partie1">
                     <h2>Partie 1 - Mise en place</h2>
+                    <hr>
                     <p>Dans cette partie, vous allez préparer l’exploit MSET9 en créant temporairement un nouveau profil de menu HOME sans données utilisateur,puis en configurant ce profil avec uniquement les données minimales requises pour que MSET9 se déclenche.</p>
                     <p>Vos données utilisateur existantes disparaîtront, mais reviendront lorsque vous aurez terminé avec cette page.</p>
                     <p>1. Insérez votre carte SD dans votre ordinateur</p>
                     <p>2. Copiez l'intégralité du contenu du dossier 'Ouvrir le dossier et A placer dans la carte SD' situé dans le fichier .zip, puis collez-le à la racine de votre carte SD, en remplaçant les fichiers existants si nécessaire.</p>
+                    <div class="box-image"><img src="/assets/images/screenshots/racine_sd_tuto.png" alt=""></div>
                     <p>3. Executez le script MSET9 :</p>
                     <ul>
                         <li class="execution-mset9">Windows : double-cliquez MSET9-Windows.bat</li>
@@ -136,8 +137,9 @@
                     <p>17. Tapez 0, puis appuyez sur Entrée pour fermer le script</p>
                     <p>18. Réinsérez votre carte SD dans votre console</p>
                 </div>
-                <div class="section-tuto" id="partie2">
+                <div class="section-tuto-2" id="partie2">
                     <h2>Partie 2 - Ajout du hack via MSET9</h2>
+                    <hr>
                     <p>Dans cette partie, vous allez déclencher MSET9 pour lancer SafeB9SInstaller (l’installateur de firmware personnalisé).</p>
                     <p>1. Mettez votre console sous tension en vous assurant que les paramètres système sont sélectionnés.</p>
                     <ul>
@@ -169,8 +171,9 @@
                         <li class="execution-mset9">Si vous obtenez un écran rouge ou si la console reste bloquée sur un écran de chargement, suivez le guide de dépannage</li>
                     </ul>
                 </div>
-                <div class="section-tuto" id="partie3">
+                <div class="section-tuto-2" id="partie3">
                     <h2>Partie 3 - Installation de boot9strap</h2>
+                    <hr>
                     <p>Dans cette partie, vous allez installer un firmware personnalisé sur votre console.</p>
                     <p>1. Lorsque vous y êtes invité, entrez la combinaison de touches indiquée sur l’écran supérieur pour installer boot9strap</p>
                     <ul>
@@ -185,11 +188,10 @@
                     </ul>
                     <p>4. Appuyez sur (Start) pour enregistrer les modifications et redémarrer</p>
                 </div>
-                <div class="section-tuto" id="partie4">
+                <div class="section-tuto-2" id="partie4">
                     <h2>Partie 4 - Suppression de MSET9</h2>
-                    <p>
-                        Dans cette partie, vous allez supprimer MSET9 pour éviter d’autres problèmes et restaurer vos données utilisateur (jeux, thèmes, etc.). (Cela ne supprimera pas le micrologiciel personnalisé que vous venez d’installer.)
-                    </p>
+                    <hr>
+                    <p>Dans cette partie, vous allez supprimer MSET9 pour éviter d’autres problèmes et restaurer vos données utilisateur (jeux, thèmes, etc.). (Cela ne supprimera pas le micrologiciel personnalisé que vous venez d’installer.)</p>
                     <p>1. Éteignez votre console</p>
                     <p>2. Insérez votre carte SD dans votre ordinateur</p>
                     <p>3. Exécutez le script MSET9 :</p>
@@ -212,12 +214,15 @@
                         <li class="execution-mset9">Vous devriez voir « Suppression réussie de MSET9 ! »</li>
                     </ul>
                     <p>7. Appuyez sur Entrée pour fermer le script MSET9</p>
-                    <div class="information">
+                    <div class="information-2">
                         <p>À partir d’ici, votre console démarrera sur Luma3DS par défaut.</p>
                         <ul>
                             <li class="execution-mset9">Luma3DS ne présente aucune différence visuelle avec le menu HOME normal. Si votre console a démarré dans le menu HOME, elle exécute un firmware personnalisé.</li>
                             <li class="execution-mset9">Sur la page suivante, vous installerez des applications homebrew utiles pour compléter votre configuration.</li>
                         </ul>
+                    </div>
+                    <div class="information-2">
+                        <p>Continuer vers <a href="">Installation des applications</a></p>
                     </div>
                 </div>
             </section>
